@@ -1,6 +1,8 @@
 # echo "interactive shell"
 # zmodload zsh/zprof # zprof profile
 
+bindkey -e # emacs keybindings
+
 # ------------------- PATH -------------------
 source "${ZDOTDIR:-${HOME}}/.zshrc-`uname`"
 
