@@ -1,7 +1,7 @@
 #XDG
-export XDG_CONFIG_HOME=$HOME/.config
-export XDG_DATA_HOME=$XDG_CONFIG_HOME/local/share
-export XDG_CACHE_HOME=$XDG_CONFIG_HOME/cache
+export XDG_CONFIG_HOME=${HOME}/.config
+export XDG_DATA_HOME=${HOME}/.local/share
+export XDG_CACHE_HOME=${HOME}/.cache
 
 # zsh
 export ZDOTDIR=$XDG_CONFIG_HOME/zsh
@@ -29,11 +29,3 @@ export TLDR_CACHE_MAX_AGE=720 # hours
 
 # ls -l 用长时间代替短时间格式
 export TIME_STYLE=long-iso
-
-# https://stackoverflow.com/questions/28491458/zsh-agnoster-theme-showing-machine-name
-# hiding user@hostname for agnoster.zsh-theme
-# DEFAULT_USER="$(whoami)"
-
-# 触摸板双指水平滑动
-# gsettings list-keys com.deepin.dde.touchpad
-# eval "$(gsettings set com.deepin.dde.touchpad horiz-scroll-enabled true)"

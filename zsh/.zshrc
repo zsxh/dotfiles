@@ -38,5 +38,16 @@ eval "$(dircolors --sh)"
 alias ls='ls --color=auto --group-directories-first'
 alias ll='ls -lh'
 
+# ------------------- tmux startup -------------------
+# https://wiki.archlinux.org/index.php/Tmux#Start_tmux_on_every_shell_login
+if command -v tmux &>/dev/null; then
+    # if ! [ "$(basename "$(cat "/proc/$PPID/comm")")" = "emacs" ]; then
+    if [ "$(basename "$(cat "/proc/$PPID/comm")")" = "alacritty" ]; then
+        # if no session is started, start a new session
+        test -z ${TMUX} && (tmux attach || tmux new-session -c $PWD)
+    fi
+fi
+
 # ------------------- Zsh Plugins -------------------
 source ${ZDOTDIR:-${HOME}}/plugins.zsh
+
