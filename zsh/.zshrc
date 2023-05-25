@@ -3,6 +3,11 @@
 
 bindkey -e # emacs keybindings
 
+# lang
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LC_CTYPE=zh_CN.UTF-8
+
 # ------------------- PATH -------------------
 source "${ZDOTDIR:-${HOME}}/.zshrc-`uname`"
 
@@ -50,4 +55,3 @@ fi
 
 # ------------------- Zsh Plugins -------------------
 source ${ZDOTDIR:-${HOME}}/plugins.zsh
-
