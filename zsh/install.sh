@@ -29,7 +29,7 @@ git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git ${Z
 git clone --depth 1 https://github.com/zsh-users/zsh-completions.git ${ZDOTDIR}/zsh-completions
 git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powerlevel10k
 
-# TODO: deps
+# TODO: install deps
 # p10k fonts
 # env tools: jenv, pyenv, fnm...
 # deps: zoxide ...
