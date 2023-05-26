@@ -42,6 +42,7 @@ alias tldr='proxychains tldr'
 eval "$(dircolors --sh)"
 alias ls='ls --color=auto --group-directories-first'
 alias ll='ls -lh'
+alias ssh='TERM=xterm ssh'
 
 # ------------------- tmux startup -------------------
 # https://wiki.archlinux.org/index.php/Tmux#Start_tmux_on_every_shell_login

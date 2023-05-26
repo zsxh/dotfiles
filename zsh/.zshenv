@@ -14,9 +14,6 @@ export SAVEHIST=10000                   # Maximum events in history file
 export EDITOR='vim'
 export VISUAL='vim'
 
-# term
-export TERM=xterm
-
 # input method
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
