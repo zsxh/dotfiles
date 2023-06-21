@@ -7,7 +7,11 @@ source ${ZDOTDIR:-${HOME}}/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ${ZDOTDIR:-${HOME}}/.p10k.zsh ]] || source ${ZDOTDIR:-${HOME}}/.p10k.zsh
 
 # ------------------- zsh-completions -------------------
-fpath=(${ZDOTDIR:-${HOME}}/zsh-completions/src /opt/vagrant/embedded/gems/2.3.3/gems/vagrant-2.3.3/contrib/zsh $HOME/.config/fnm/zfunc $fpath)
+fpath=(${ZDOTDIR:-${HOME}}/zsh-completions/src
+       /opt/vagrant/embedded/gems/2.3.3/gems/vagrant-2.3.3/contrib/zsh
+       $HOME/.config/fnm/zfunc
+       $HOME/.config/pdm
+       $fpath)
 autoload -Uz compinit
 compinit
 _comp_options+=(globdots) # With hidden files
