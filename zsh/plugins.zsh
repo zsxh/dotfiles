@@ -12,8 +12,10 @@ fpath=(${ZDOTDIR:-${HOME}}/zsh-completions/src
        $HOME/.config/fnm/zfunc
        $HOME/.config/pdm
        $fpath)
-autoload -Uz compinit
+autoload -Uz compinit bashcompinit
 compinit
+bashcompinit
+eval "$(register-python-argcomplete pipx)" # pipx
 _comp_options+=(globdots) # With hidden files
 
 # ------------------- zsh-syntax-highlighting -------------------
