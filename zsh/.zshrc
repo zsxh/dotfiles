@@ -36,7 +36,12 @@ eval "$(fnm env)"
 
 # ------------------- Alias -------------------
 alias mg="mvn archetype:generate"
-alias shttp="export http_proxy=http://127.0.0.1:1081/; export https_proxy=http://127.0.0.1:1081/;"
+if [[ -z $WSL_DISTRO_NAME ]]; then
+    proxy_ip="127.0.0.1"
+else
+    proxy_ip=$(cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }')
+fi
+alias shttp="export http_proxy=http://${proxy_ip}:1081/; export https_proxy=http://${proxy_ip}:1081/;"
 alias uhttp="unset http_proxy; unset https_proxy;"
 alias tldr='proxychains tldr'
 eval "$(dircolors --sh)"
