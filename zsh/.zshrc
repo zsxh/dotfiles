@@ -59,5 +59,13 @@ if command -v tmux &>/dev/null; then
     fi
 fi
 
-# ------------------- Zsh Plugins -------------------
+# ------------------- zsh fzf keybindings -------------------
+# Append this line to ~/.zshrc to enable fzf keybindings for Zsh:
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+
+# ------------------- zsh fzf auto-completion -------------------
+# Append this line to ~/.zshrc to enable fuzzy auto-completion for Zsh:
+source /usr/share/doc/fzf/examples/completion.zsh
+
+# ------------------- zsh Plugins -------------------
 source ${ZDOTDIR:-${HOME}}/plugins.zsh
