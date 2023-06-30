@@ -49,6 +49,12 @@ alias ls='ls --color=auto --group-directories-first'
 alias ll='ls -lh'
 alias ssh='TERM=xterm ssh'
 
+# ------------------- fcitx5 for wsl -------------------
+# https://github.com/microsoft/wslg/issues/117
+if [[ $WSL_DISTRO_NAME && -z $(pgrep -x fcitx5) ]]; then
+    fcitx5 --disable=wayland -d &> /dev/null
+fi
+
 # ------------------- tmux startup -------------------
 # https://wiki.archlinux.org/index.php/Tmux#Start_tmux_on_every_shell_login
 if command -v tmux &>/dev/null; then
