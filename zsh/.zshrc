@@ -31,9 +31,6 @@ if command -v pyenv 1>/dev/null 2>&1; then
     }
 fi
 
-# Node Version Manager, # https://github.com/Schniz/fnm/issues/171#issuecomment-721696818
-eval "$(fnm env)"
-
 # ------------------- Alias -------------------
 alias mg="mvn archetype:generate"
 if [[ -z $WSL_DISTRO_NAME ]]; then
