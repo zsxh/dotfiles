@@ -25,3 +25,9 @@ export TLDR_CACHE_MAX_AGE=720 # hours
 
 # ls -l 用长时间代替短时间格式
 export TIME_STYLE=long-iso
+
+# emacs xwidgets webkit for wsl
+# https://www.reddit.com/r/emacs/comments/141jefa/emacs_with_xwidgets_on_wsl/
+if [[ $WSL_DISTRO_NAME ]]; then
+    export WEBKIT_DISABLE_COMPOSITING_MODE=1
+fi
