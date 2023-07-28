@@ -1,18 +1,12 @@
 [user]
-	name = zsxh
-	email = bnbvbchen@gmail.com
+  name = zsxh
+  email = bnbvbchen@gmail.com
 [core]
-	quotepath = false
-#   pager = delta
-# [interactive]
-#   diffFilter = delta --color-only
-# [delta]
-# 	navigate = true  # use n and N to move between diff sections
+  quotepath = false
 # [merge]
 #   conflictstyle = diff3
 [diff]
-	colorMoved = default
-
+  colorMoved = default
 [http "https://github.com"]
   proxy = socks5h://127.0.0.1:1080
 [http "https://codeberg.org"]
@@ -20,4 +14,4 @@
 [http "https://gitlab.com"]
   proxy = socks5h://127.0.0.1:1080
 [http "https://192.168.11.194"]
-	sslVerify = false
+  sslVerify = false
