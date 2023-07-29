@@ -16,7 +16,10 @@ fi
 autoload -Uz compinit bashcompinit
 compinit
 bashcompinit
-eval "$(register-python-argcomplete pipx)" # pipx
+if command -v register-python-argcomplete &>/dev/null; then
+    # pipx zsh completions
+    eval "$(register-python-argcomplete pipx)"
+fi
 _comp_options+=(globdots) # With hidden files
 
 # ------------------- zsh-syntax-highlighting -------------------
@@ -27,7 +30,9 @@ source ${ZDOTDIR:-${HOME}}/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # ------------------- zoxide -------------------
 # https://github.com/ajeetdsouza/zoxide, must be added after compinit is called
-eval "$(zoxide init zsh)"
+if command -v zoxide &>/dev/null; then
+    eval "$(zoxide init zsh)"
+fi
 
 # ------------------- fzf -------------------
 if [[ -s "/usr/share/fzf/key-bindings.zsh" ]]; then
