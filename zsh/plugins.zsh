@@ -42,6 +42,7 @@ fi
 if [[ -s "/usr/share/fzf/completion.zsh" ]]; then
     source /usr/share/fzf/completion.zsh
 fi
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # ------------------- zsh completions styles (copy from prezto)-------------------
 # Use caching to make completion for commands such as dpkg and apt usable.
