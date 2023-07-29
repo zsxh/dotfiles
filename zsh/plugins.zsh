@@ -37,12 +37,12 @@ fi
 # ------------------- fzf -------------------
 if [[ -s "/usr/share/fzf/key-bindings.zsh" ]]; then
     source /usr/share/fzf/key-bindings.zsh
-    export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 fi
 if [[ -s "/usr/share/fzf/completion.zsh" ]]; then
     source /usr/share/fzf/completion.zsh
 fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 
 # ------------------- zsh completions styles (copy from prezto)-------------------
 # Use caching to make completion for commands such as dpkg and apt usable.
