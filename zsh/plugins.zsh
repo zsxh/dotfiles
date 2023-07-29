@@ -8,7 +8,6 @@ source ${ZDOTDIR:-${HOME}}/powerlevel10k/powerlevel10k.zsh-theme
 
 # ------------------- zsh-completions -------------------
 fpath=(${ZDOTDIR:-${HOME}}/zsh-completions/src
-       /opt/vagrant/embedded/gems/2.3.3/gems/vagrant-2.3.3/contrib/zsh
        $HOME/.config/pdm
        $fpath)
 autoload -Uz compinit bashcompinit
