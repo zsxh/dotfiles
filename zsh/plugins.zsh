@@ -11,7 +11,7 @@ fpath=(${ZDOTDIR:-${HOME}}/zsh-completions/src
        $HOME/.config/pdm
        $fpath)
 if command -v brew &>/dev/null; then
-    fpath="$(brew --prefix)/share/zsh/site-functions:${fpath}"
+    fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
 fi
 autoload -Uz compinit bashcompinit
 compinit
