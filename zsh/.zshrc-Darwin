@@ -7,5 +7,7 @@ export PKG_CONFIG_PATH=/opt/homebrew/opt/jpeg/lib/pkgconfig:/opt/homebrew/opt/li
 
 # python
 export PYENV_ROOT=$HOME/.pyenv
+# javascript
+export PNPM_HOME=$HOME/.local/share/pnpm
 
-export PATH=$PYENV_ROOT/bin:$HOME/.local/bin:$PATH
+export PATH=$PYENV_ROOT/bin:$PNPM_HOME:$HOME/.local/bin:$PATH
