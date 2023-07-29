@@ -21,6 +21,7 @@ ln -sf ${currentDir}/.zshenv ~/.zshenv
 ln -sf ${currentDir}/.zprofile ${ZDOTDIR}/.zprofile
 ln -sf ${currentDir}/.zshrc ${ZDOTDIR}/.zshrc
 ln -sf ${currentDir}/.zshrc-Linux ${ZDOTDIR}/.zshrc-Linux
+ln -sf ${currentDir}/.zshrc-Darwin ${ZDOTDIR}/.zshrc-Darwin
 ln -sf ${currentDir}/plugins.zsh ${ZDOTDIR}/plugins.zsh
 ln -sf ${currentDir}/.p10k.zsh ${ZDOTDIR}/.p10k.zsh
 

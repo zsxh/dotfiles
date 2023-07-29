@@ -8,11 +8,16 @@ export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 export LC_CTYPE=zh_CN.UTF-8
 
+# Output commands to set the LS_COLORS environment variable.
+if command -v dircolors &>/dev/null; then
+    eval "$(dircolors --sh)"
+fi
+
 # ------------------- PATH -------------------
 source "${ZDOTDIR:-${HOME}}/.zshrc-`uname`"
 
 # Lazy load jenv
-if type jenv > /dev/null; then
+if type jenv &> /dev/null; then
     export PATH="${JENV_ROOT}/shims:${PATH}"
     function jenv() {
         unset -f jenv
@@ -22,7 +27,7 @@ if type jenv > /dev/null; then
 fi
 
 # Lazy load pyenv
-if command -v pyenv 1>/dev/null 2>&1; then
+if command -v pyenv &>/dev/null; then
     export PATH="${PYENV_ROOT}/shims:${PATH}"
     function pyenv() {
         unset -f pyenv
@@ -41,8 +46,11 @@ fi
 alias shttp="export http_proxy=http://${proxy_ip}:1081/; export https_proxy=http://${proxy_ip}:1081/;"
 alias uhttp="unset http_proxy; unset https_proxy;"
 alias tldr='proxychains tldr'
-eval "$(dircolors --sh)"
-alias ls='ls --color=auto --group-directories-first'
+if [[ "${uname}" == "Linux" ]]; then
+    alias ls='ls --color=auto --group-directories-first'
+else
+    alias ls='ls --color=auto'
+fi
 alias ll='ls -lh'
 alias ssh='TERM=xterm ssh'
 

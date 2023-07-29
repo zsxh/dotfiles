@@ -27,6 +27,3 @@ export VAGRANT_DEFAULT_PROVIDER=libvirt
 # export VAGRANT_HOST_KEY_CHECKING=False
 
 export PATH=$PNPM_HOME:$LSP_SERVER:$PYENV_ROOT/bin:$PYTHONUSERBASE/bin:$RUST_HOME/bin:$GO_HOME/bin:$GOPATH/bin:$JENV_ROOT/bin:$MAVEN_HOME/bin:$JMC:$CLOJURE_TOOL:$RUBY_HOME/bin:$GIT_INFO_HOME:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$CUDA_PATH:$CUDA_PATH/bin:$LD_LIBRARY_PATH
-
-
-
