@@ -1,0 +1,14 @@
+# https://docs.brew.sh/Shell-Completion
+#if type brew &>/dev/null
+#then
+#  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+#  autoload -Uz compinit
+#  compinit
+#fi
+
+export LDFLAGS="-L/opt/homebrew/opt/jpeg/lib -L/opt/homebrew/opt/libxml2/lib -L/opt/homebrew/opt/giflib/lib -L/opt/homebrew/opt/libtiff/lib -L/opt/homebrew/opt/webp/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/jpeg/include -I/opt/homebrew/opt/libxml2/include -I/opt/homebrew/opt/giflib/include -I/opt/homebrew/opt/libtiff/include -I/opt/homebrew/opt/webp/include"
+export PKG_CONFIG_PATH=/opt/homebrew/opt/jpeg/lib/pkgconfig:/opt/homebrew/opt/libxml2/lib/pkgconfig
+
+#export PATH=/Applications/Emacs.app/Contents/MacOS:$PATH
+#export PATH=/Applications/Emacs.app/Contents/MacOS/bin:$PATH
