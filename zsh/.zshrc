@@ -12,8 +12,7 @@ export LC_CTYPE=zh_CN.UTF-8
 if [[ ${OS_UNAME} == "Linux" ]] && command -v dircolors &>/dev/null; then
     eval "$(dircolors --sh)"
 elif [[ ${OS_UNAME} == "Darwin" ]] && command -v gdircolors &>/dev/null; then
-    # eval "$(gdircolors --sh)"
-    eval "$(gdircolors)"
+    eval "$(gdircolors --sh)"
 fi
 
 # ------------------- PATH -------------------

@@ -6,9 +6,11 @@ export PKG_CONFIG_PATH=/opt/homebrew/opt/jpeg/lib/pkgconfig:/opt/homebrew/opt/li
 export EMACS_APP=/Applications/Emacs.app/Contents/MacOS
 # util-linux
 export UTIL_LINUX=/opt/homebrew/opt/util-linux
+# java
+export JAVA_HOME=`/usr/libexec/java_home`
 # python
 export PYENV_ROOT=$HOME/.pyenv
 # javascript
 export PNPM_HOME=$HOME/.local/share/pnpm
 
-export PATH=$PYENV_ROOT/bin:$PNPM_HOME:$HOME/.local/bin:$UTIL_LINUX/bin:$UTIL_LINUX/sbin:$EMACS_APP:$EMACS_APP/bin:$PATH
+export PATH=$PYENV_ROOT/bin:$PNPM_HOME:$HOME/.local/bin:$JAVA_HOME/bin:$UTIL_LINUX/bin:$UTIL_LINUX/sbin:$EMACS_APP:$EMACS_APP/bin:$PATH
