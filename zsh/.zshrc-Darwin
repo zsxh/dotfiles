@@ -12,5 +12,7 @@ export JAVA_HOME=`/usr/libexec/java_home`
 export PYENV_ROOT=$HOME/.pyenv
 # javascript
 export PNPM_HOME=$HOME/.local/share/pnpm
+# lsp
+export LSP_SERVER=$HOME/.emacs.d/cache/lsp-servers/bin
 
-export PATH=$PYENV_ROOT/bin:$PNPM_HOME:$HOME/.local/bin:$JAVA_HOME/bin:$UTIL_LINUX/bin:$UTIL_LINUX/sbin:$EMACS_APP:$EMACS_APP/bin:$PATH
+export PATH=$PYENV_ROOT/bin:$PNPM_HOME:$HOME/.local/bin:$LSP_SERVER:$JAVA_HOME/bin:$UTIL_LINUX/bin:$UTIL_LINUX/sbin:$EMACS_APP:$EMACS_APP/bin:$PATH
