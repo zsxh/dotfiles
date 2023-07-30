@@ -47,7 +47,8 @@ else
 fi
 alias shttp="export http_proxy=http://${proxy_ip}:1081/; export https_proxy=http://${proxy_ip}:1081/;"
 alias uhttp="unset http_proxy; unset https_proxy;"
-alias tldr='proxychains tldr'
+# proxychains-ng will not work in macos unless disabling sip
+# alias tldr='proxychains tldr'
 if [[ ${OS_UNAME} == "Linux" ]]; then
     alias ls='ls --color=auto --group-directories-first'
 elif [[ ${OS_UNAME} == "Darwin" ]] && command -v gls &>/dev/null; then
