@@ -9,8 +9,11 @@ export LANGUAGE=en_US.UTF-8
 export LC_CTYPE=zh_CN.UTF-8
 
 # Output commands to set the LS_COLORS environment variable.
-if command -v dircolors &>/dev/null; then
+if [[ ${OS_UNAME} == "Linux" ]] && command -v dircolors &>/dev/null; then
     eval "$(dircolors --sh)"
+elif [[ ${OS_UNAME} == "Darwin" ]] && command -v gdircolors &>/dev/null; then
+    # eval "$(gdircolors --sh)"
+    eval "$(gdircolors)"
 fi
 
 # ------------------- PATH -------------------
@@ -46,8 +49,10 @@ fi
 alias shttp="export http_proxy=http://${proxy_ip}:1081/; export https_proxy=http://${proxy_ip}:1081/;"
 alias uhttp="unset http_proxy; unset https_proxy;"
 alias tldr='proxychains tldr'
-if [[ "${uname}" == "Linux" ]]; then
+if [[ ${OS_UNAME} == "Linux" ]]; then
     alias ls='ls --color=auto --group-directories-first'
+elif [[ ${OS_UNAME} == "Darwin" ]] && command -v gls &>/dev/null; then
+    alias ls='gls --color=auto --group-directories-first'
 else
     alias ls='ls --color=auto'
 fi

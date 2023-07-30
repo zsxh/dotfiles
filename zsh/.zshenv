@@ -21,7 +21,6 @@ export TLDR_CACHE_MAX_AGE=720 # hours
 # ls -l 用长时间代替短时间格式
 export TIME_STYLE=long-iso
 
-ostype="$(uname)"
 
 # emacs xwidgets webkit for wsl
 # https://www.reddit.com/r/emacs/comments/141jefa/emacs_with_xwidgets_on_wsl/
@@ -29,15 +28,17 @@ if [[ $WSL_DISTRO_NAME ]]; then
     export WEBKIT_DISABLE_COMPOSITING_MODE=1
 fi
 
+export OS_UNAME="$(uname)"
+
 # Linux input method
-if [[ $ostype == "Linux" ]]; then
+if [[ ${OS_UNAME} == "Linux" ]]; then
     export GTK_IM_MODULE=fcitx
     export QT_IM_MODULE=fcitx
     export XMODIFIERS=@im=fcitx
 fi
 
 # MacOS brew
-if [[ $ostype == "Darwin" ]]; then
+if [[ ${OS_UNAME} == "Darwin" ]]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
     export HOMEBREW_API_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api"
     export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
