@@ -35,5 +35,8 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 # env tools: jenv, pyenv, pipx, pdm[all], pnpm...
 # deps: fzf, zoxide, tldr ...
 
+# Arch
+# pacman -S fd poppler ffmpegthumbnailer mediainfo imagemagick tar unzip
+
 # Macos
-# brew install coreutils
+# brew install coreutils fd poppler ffmpegthumbnailer mediainfo imagemagick
