@@ -38,6 +38,13 @@ if command -v pyenv &>/dev/null; then
     }
 fi
 
+# load rtx
+if command -v rtx &>/dev/null; then
+    # TODO: rtx do not support setting timeout
+    export PATH="${RTX_HOME}/shims:${PATH}"
+    eval "$(rtx activate zsh)"
+fi
+
 # ------------------- Alias -------------------
 alias mg="mvn archetype:generate"
 if [[ -z $WSL_DISTRO_NAME ]]; then
