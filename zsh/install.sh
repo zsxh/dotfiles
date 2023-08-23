@@ -37,3 +37,5 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 
 # Macos
 # brew install coreutils
+
+# TODO: use rtx to manage multiple runtimes, eg: jenv, pyenv...
