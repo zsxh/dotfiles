@@ -18,6 +18,7 @@ fi
 # ------------------- PATH -------------------
 source "${ZDOTDIR:-${HOME}}/.zshrc-`uname`"
 
+# TODO: drop jenv
 # Lazy load jenv
 if type jenv &> /dev/null; then
     export PATH="${JENV_ROOT}/shims:${PATH}"
@@ -28,6 +29,7 @@ if type jenv &> /dev/null; then
     }
 fi
 
+# TODO: drop pyenv
 # Lazy load pyenv
 if command -v pyenv &>/dev/null; then
     export PATH="${PYENV_ROOT}/shims:${PATH}"

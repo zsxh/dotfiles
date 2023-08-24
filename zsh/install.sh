@@ -30,12 +30,42 @@ git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git ${Z
 git clone --depth 1 https://github.com/zsh-users/zsh-completions.git ${ZDOTDIR}/zsh-completions
 git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powerlevel10k
 
-# TODO: install deps
 # p10k fonts
-# env tools: jenv, pyenv, pipx, pdm[all], pnpm...
 # deps: fzf, zoxide, tldr ...
 
 # Macos
 # brew install coreutils
 
-# TODO: use rtx to manage multiple runtimes, eg: jenv, pyenv...
+# TODO: install rtx, jenv
+
+# rtx plugins install clojure
+# rtx install clojure@1.11
+# rtx use -g clojure@1.11
+
+# rtx install node@20
+# rtx use -g node@20
+
+# rtx plugins install pnpm
+# rtx install pnpm
+# rtx use -g pnpm
+# pnpm add -g typescript-language-server typescript pyright
+
+# rtx install python@3.10
+# rtx use -g python@3.10
+# python3 -m pip install --user --upgrade pipx
+# python3 -m pipx ensurepath
+# pipx install "pdm[all]"
+# pipx install ruff
+# pipx install black
+# pipx install iredis
+
+# export RTX_FETCH_REMOTE_VERSIONS_TIMEOUT=60s
+# rtx install java@adoptopenjdk-8.0.382+5 # or zulu 8
+# rtx install java@adoptopenjdk-11.0.20+8
+# rtx install java@adoptopenjdk-17.0.8+7
+# rtx install java@adoptopenjdk-20.0.2+9
+# rtx use -g java@adoptopenjdk-20.0.2+9
+
+# rtx install plugins maven
+# rtx install maven
+# rtx use -g maven
