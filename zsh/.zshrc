@@ -18,32 +18,9 @@ fi
 # ------------------- PATH -------------------
 source "${ZDOTDIR:-${HOME}}/.zshrc-`uname`"
 
-# TODO: drop jenv
-# Lazy load jenv
-if type jenv &> /dev/null; then
-    export PATH="${JENV_ROOT}/shims:${PATH}"
-    function jenv() {
-        unset -f jenv
-        eval "$(command jenv init -)"
-        jenv $@
-    }
-fi
-
-# TODO: drop pyenv
-# Lazy load pyenv
-if command -v pyenv &>/dev/null; then
-    export PATH="${PYENV_ROOT}/shims:${PATH}"
-    function pyenv() {
-        unset -f pyenv
-        eval "$(command pyenv init - --no-rehash)"
-        pyenv $@
-    }
-fi
-
 # load rtx
 if command -v rtx &>/dev/null; then
-    # TODO: rtx do not support setting timeout
-    export PATH="${RTX_HOME}/shims:${PATH}"
+    export PATH="$HOME/.local/share/rtx/shims:${PATH}"
     eval "$(rtx activate zsh)"
 fi
 

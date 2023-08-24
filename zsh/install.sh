@@ -42,8 +42,8 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 # TODO: Install rtx, jenv
 
 # rtx plugins install clojure
-# rtx install clojure@1.11
-# rtx use -g clojure@1.11
+# rtx install clojure
+# rtx use -g clojure
 
 # rtx install node@20
 # rtx use -g node@20
@@ -63,12 +63,12 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 # pipx install iredis
 
 # export RTX_FETCH_REMOTE_VERSIONS_TIMEOUT=60s
-# rtx install java@adoptopenjdk-8.0.382+5 # or zulu 8
+# rtx install java@adoptopenjdk-8.0.382+5 # or zulu-8.72.0.71
 # rtx install java@adoptopenjdk-11.0.20+8
 # rtx install java@adoptopenjdk-17.0.8+7
 # rtx install java@adoptopenjdk-20.0.2+9
 # rtx use -g java@adoptopenjdk-20.0.2+9
 
-# rtx install plugins maven
+# rtx plugins install maven
 # rtx install maven
 # rtx use -g maven
