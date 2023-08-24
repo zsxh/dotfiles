@@ -1,6 +1,6 @@
 export LDFLAGS="-L/opt/homebrew/opt/jpeg/lib -L/opt/homebrew/opt/libxml2/lib -L/opt/homebrew/opt/giflib/lib -L/opt/homebrew/opt/libtiff/lib -L/opt/homebrew/opt/webp/lib -L/opt/homebrew/opt/util-linux/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/jpeg/include -I/opt/homebrew/opt/libxml2/include -I/opt/homebrew/opt/giflib/include -I/opt/homebrew/opt/libtiff/include -I/opt/homebrew/opt/webp/include -I/opt/homebrew/opt/util-linux/include"
-export PKG_CONFIG_PATH=/opt/homebrew/opt/jpeg/lib/pkgconfig:/opt/homebrew/opt/libxml2/lib/pkgconfig:/opt/homebrew/opt/util-linux/lib/pkgconfig
+export PKG_CONFIG_PATH=/opt/homebrew/opt/jpeg/lib/pkgconfig:/opt/homebrew/opt/libxml2/lib/pkgconfig:/opt/homebrew/opt/util-linux/lib/pkgconfig:/opt/homebrew/opt/poppler/lib/pkgconfig
 
 # emacs
 export EMACS_APP=/Applications/Emacs.app/Contents/MacOS

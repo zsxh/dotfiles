@@ -33,10 +33,13 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 # p10k fonts
 # deps: fzf, zoxide, tldr ...
 
-# Macos
-# brew install coreutils
+# Arch
+# pacman -S fd poppler ffmpegthumbnailer mediainfo imagemagick tar unzip
 
-# TODO: install rtx, jenv
+# Macos
+# brew install coreutils fd poppler ffmpegthumbnailer mediainfo imagemagick
+
+# TODO: Install rtx, jenv
 
 # rtx plugins install clojure
 # rtx install clojure@1.11
