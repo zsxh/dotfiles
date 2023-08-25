@@ -39,18 +39,18 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 # Macos
 # brew install coreutils fd poppler ffmpegthumbnailer mediainfo imagemagick
 
-# TODO: Install rtx, jenv
+# TODO: Install rtx, https://github.com/jdxcode/rtx
 
 # rtx plugins install clojure
 # rtx install clojure
-# rtx use -g clojure
+# rtx use -g clojure@<version>
 
 # rtx install node@20
 # rtx use -g node@20
 
 # rtx plugins install pnpm
 # rtx install pnpm
-# rtx use -g pnpm
+# rtx use -g pnpm@<version>
 # pnpm add -g typescript-language-server typescript pyright
 
 # rtx install python@3.10
@@ -71,4 +71,4 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 
 # rtx plugins install maven
 # rtx install maven
-# rtx use -g maven
+# rtx use -g maven@version
