@@ -77,8 +77,8 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 
 # NOTE: rust-analyzer必须在配置(gloabl/local)中比rust的位置靠前，不然path/shims就会先找到rust中的rust-analyzer安装脚本
 # rtx plugins install rust-analyzer
-# rtx install rust-analyzer@version
-# rtx use -g rust-analyzer@version
+# rtx install rust-analyzer@2023
+# rtx use -g rust-analyzer@2023
 
 # rtx plugins install rust
 # rtx install rust@1.72
