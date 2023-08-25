@@ -74,3 +74,11 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 # rtx plugins install maven
 # rtx install maven
 # rtx use -g maven@version
+
+# rtx plugins install rust
+# rtx install rust@1.72
+# rtx use -g rust@1.72
+
+# rtx plugins install rust-analyzer
+# rtx install rust-analyzer@version
+# rtx use -g rust-analyzer@version
