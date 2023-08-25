@@ -62,6 +62,8 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 # pipx install black
 # pipx install iredis
 
+# pdm completion zsh > ~/.config/pdm/_pdm
+
 # export RTX_FETCH_REMOTE_VERSIONS_TIMEOUT=60s
 # rtx install java@adoptopenjdk-8.0.382+5 # or zulu-8.72.0.71
 # rtx install java@adoptopenjdk-11.0.20+8

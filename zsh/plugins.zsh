@@ -14,10 +14,16 @@ if command -v brew &>/dev/null; then
     fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
 fi
 autoload -Uz compinit bashcompinit
-compinit
+# NOTE: zsh completions
+# - https://zsh.sourceforge.io/Doc/Release/Completion-System.html
+# - https://www.danielmoch.com/posts/2018/11/zsh-compinit-rtfm/
+# - https://gist.github.com/ctechols/ca1035271ad134841284
+# - https://medium.com/@dannysmith/little-thing-2-speeding-up-zsh-f1860390f92
+# FIXME: compinit/compdump is slow if I don't give zcompdump file a name other than ".zcompdump", Why?
+compinit -d ${ZDOTDIR:-${HOME}}/.zcompdump_2
 bashcompinit
 if command -v register-python-argcomplete &>/dev/null; then
-    # pipx zsh completions
+    # pipx completions
     eval "$(register-python-argcomplete pipx)"
 fi
 _comp_options+=(globdots) # With hidden files

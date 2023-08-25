@@ -46,3 +46,6 @@ if [[ ${OS_UNAME} == "Darwin" ]]; then
     export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
     export HOMEBREW_PIP_INDEX_URL="https://pypi.tuna.tsinghua.edu.cn/simple"
 fi
+
+# Skipping Ubuntu system-wide compinit
+skip_global_compinit=1
