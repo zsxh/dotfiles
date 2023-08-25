@@ -39,7 +39,7 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 # Macos
 # brew install coreutils fd poppler ffmpegthumbnailer mediainfo imagemagick
 
-# TODO: Install rtx, https://github.com/jdxcode/rtx
+# Install rtx, https://github.com/jdxcode/rtx
 
 # rtx plugins install clojure
 # rtx install clojure
@@ -65,20 +65,22 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 # pdm completion zsh > ~/.config/pdm/_pdm
 
 # export RTX_FETCH_REMOTE_VERSIONS_TIMEOUT=60s
-# rtx install java@adoptopenjdk-8.0.382+5 # or zulu-8.72.0.71
-# rtx install java@adoptopenjdk-11.0.20+8
-# rtx install java@adoptopenjdk-17.0.8+7
-# rtx install java@adoptopenjdk-20.0.2+9
-# rtx use -g java@adoptopenjdk-20.0.2+9
+# rtx install java@adoptopenjdk-8 # or zulu-8
+# rtx install java@adoptopenjdk-11
+# rtx install java@adoptopenjdk-17
+# rtx install java@adoptopenjdk-20
+# rtx use -g java@adoptopenjdk-20
 
 # rtx plugins install maven
 # rtx install maven
 # rtx use -g maven@version
 
+# NOTE: rust-analyzer必须在配置(gloabl/local)中比rust的位置靠前，不然path/shims就会先找到rust中的rust-analyzer安装脚本
+# rtx plugins install rust-analyzer
+# rtx install rust-analyzer@version
+# rtx use -g rust-analyzer@version
+
 # rtx plugins install rust
 # rtx install rust@1.72
 # rtx use -g rust@1.72
 
-# rtx plugins install rust-analyzer
-# rtx install rust-analyzer@version
-# rtx use -g rust-analyzer@version
