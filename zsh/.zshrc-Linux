@@ -7,8 +7,6 @@ export GO_HOME=/usr/local/go
 export GOPATH=$HOME/Code/workspace/go
 export GO111MODULE=on
 export GOPROXY=https://proxy.golang.com.cn,direct
-# rust
-export RUST_HOME=$HOME/.cargo
 # git-info
 export GIT_INFO_HOME=$HOME/.config/git-info
 # lsp
@@ -21,4 +19,4 @@ export VAGRANT_DEFAULT_PROVIDER=libvirt
 export RTX_HOME=$HOME/.local/share/rtx
 
 
-export PATH=$RTX_HOME/bin:$PNPM_HOME:$LSP_SERVER:$PYTHONUSERBASE/bin:$RUST_HOME/bin:$GO_HOME/bin:$GOPATH/bin:$GIT_INFO_HOME:$PATH
+export PATH=$RTX_HOME/bin:$PNPM_HOME:$LSP_SERVER:$PYTHONUSERBASE/bin:$GO_HOME/bin:$GOPATH/bin:$GIT_INFO_HOME:$PATH
