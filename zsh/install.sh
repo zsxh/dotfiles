@@ -69,7 +69,7 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 # rtx install java@adoptopenjdk-11
 # rtx install java@adoptopenjdk-17
 # rtx install java@adoptopenjdk-20
-# rtx use -g java@adoptopenjdk-20
+# rtx use -g java@adoptopenjkd-20.<latest-version>
 
 # rtx plugins install maven
 # rtx install maven
@@ -84,3 +84,6 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 # rtx install rust@1.72
 # rtx use -g rust@1.72
 
+# NOTE: after installing gopls, execute rtx reshim to make a gopls shim in rtx shims path for ide
+# rtx install go@1.21
+# rtx use -g go@1.21

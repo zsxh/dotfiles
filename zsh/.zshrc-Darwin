@@ -8,7 +8,10 @@ export EMACS_APP=/Applications/Emacs.app/Contents/MacOS
 export UTIL_LINUX=/opt/homebrew/opt/util-linux
 # javascript
 export PNPM_HOME=$HOME/.local/share/pnpm
+# go
+export GOPROXY=https://goproxy.cn,direct
 # lsp
 export LSP_SERVER=$HOME/.emacs.d/cache/lsp-servers/bin
+
 
 export PATH=$PNPM_HOME:$HOME/.local/bin:$LSP_SERVER:$UTIL_LINUX/bin:$UTIL_LINUX/sbin:$EMACS_APP:$EMACS_APP/bin:$PATH
