@@ -69,7 +69,7 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 # rtx install java@adoptopenjdk-11
 # rtx install java@adoptopenjdk-17
 # rtx install java@adoptopenjdk-20
-# rtx use -g java@adoptopenjkd-20.<latest-version>
+# rtx use -g java@adoptopenjkd-20
 
 # rtx plugins install maven
 # rtx install maven
