@@ -51,6 +51,10 @@ if [[ $WSL_DISTRO_NAME && -z $(pgrep -x fcitx5) ]]; then
     fcitx5 --disable=wayland -d &> /dev/null
 fi
 
+# ------------------- OrbStack for MacOS -------------------
+# Added by OrbStack: command-line tools and integration
+[ -f ~/.orbstack/shell/init.zsh ] && source ~/.orbstack/shell/init.zsh 2>/dev/null || :
+
 # ------------------- tmux startup -------------------
 # https://wiki.archlinux.org/index.php/Tmux#Start_tmux_on_every_shell_login
 # if command -v tmux &>/dev/null; then

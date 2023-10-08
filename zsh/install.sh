@@ -42,15 +42,12 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 # Install rtx, https://github.com/jdxcode/rtx
 
 # rtx plugins install clojure
-# rtx install clojure
-# rtx use -g clojure@<version>
+# rtx use -g clojure
 
-# rtx install node@20
-# rtx use -g node@20
+# rtx use -g node
 
 # rtx plugins install pnpm
-# rtx install pnpm
-# rtx use -g pnpm@<version>
+# rtx use -g pnpm
 # pnpm add -g typescript-language-server typescript pyright
 
 # rtx install python@3.10
@@ -72,18 +69,20 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 # rtx use -g java@adoptopenjkd-20
 
 # rtx plugins install maven
-# rtx install maven
-# rtx use -g maven@version
+# rtx use -g maven@3
 
 # NOTE: rust-analyzer必须在配置(gloabl/local)中比rust的位置靠前，不然path/shims就会先找到rust中的rust-analyzer安装脚本
 # rtx plugins install rust-analyzer
-# rtx install rust-analyzer@2023
-# rtx use -g rust-analyzer@2023
+# rtx use -g rust-analyzer
 
 # rtx plugins install rust
-# rtx install rust@1.72
-# rtx use -g rust@1.72
+# rtx use -g rust
 
 # NOTE: after installing gopls, execute rtx reshim to make a gopls shim in rtx shims path for ide
-# rtx install go@1.21
-# rtx use -g go@1.21
+# rtx use -g go
+
+# rtx plugins install act
+# rtx use -g act
+
+# rtx plugins install lazydocker https://github.com/comdotlinux/asdf-lazydocker.git
+# rtx use -g lazydocker
