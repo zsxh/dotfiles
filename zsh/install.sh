@@ -86,3 +86,5 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 
 # rtx plugins install lazydocker https://github.com/comdotlinux/asdf-lazydocker.git
 # rtx use -g lazydocker
+
+# rtx use -g jq
