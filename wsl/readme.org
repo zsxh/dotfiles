@@ -1,0 +1,2 @@
+create a .wslconfig file in your Windows home directory
+(e.g: C:\Users\<yourusername>\.wslconfig)
