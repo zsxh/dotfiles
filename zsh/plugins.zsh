@@ -8,7 +8,7 @@ source ${ZDOTDIR:-${HOME}}/powerlevel10k/powerlevel10k.zsh-theme
 
 # ------------------- zsh-completions -------------------
 fpath=(${ZDOTDIR:-${HOME}}/zsh-completions/src
-       $HOME/.config/pdm
+       ${ZDOTDIR:-${HOME}}/completions
        $fpath)
 if command -v brew &>/dev/null; then
     fpath=($(brew --prefix)/share/zsh/site-functions $fpath)

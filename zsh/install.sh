@@ -58,8 +58,7 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 # pipx install ruff
 # pipx install black
 # pipx install iredis
-
-# pdm completion zsh > ~/.config/pdm/_pdm
+# pdm completion zsh > ${ZDOTDIR:-$HOME}/completions/_pdm
 
 # export RTX_FETCH_REMOTE_VERSIONS_TIMEOUT=60s
 # rtx install java@adoptopenjdk-8 # or zulu-8
@@ -93,6 +92,8 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 
 # rtx plugins install k3d
 # rtx use -g k3d
+# k3d completion zsh > ${ZDOTDIR:-$HOME}/completions/_k3d
 
 # rtx plugins install kubectl
 # rtx use -g kubectl
+# kubectl completion zsh > ${ZDOTDIR:-$HOME}/completions/_kubectl
