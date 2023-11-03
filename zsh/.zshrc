@@ -33,7 +33,7 @@ alias mg="mvn archetype:generate"
 #     proxy_ip=$(cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }')
 # fi
 proxy_ip="127.0.0.1"
-alias shttp="export http_proxy=http://${proxy_ip}:1081/; export https_proxy=http://${proxy_ip}:1081/;"
+alias shttp="export http_proxy=http://${proxy_ip}:1080/; export https_proxy=http://${proxy_ip}:1080/;"
 alias uhttp="unset http_proxy; unset https_proxy;"
 # proxychains-ng will not work in macos unless disabling sip
 # alias tldr='proxychains tldr'
