@@ -88,3 +88,4 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 # rtx use -g lazydocker
 
 # rtx use -g jq
+# rtx use -g k3d
