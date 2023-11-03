@@ -81,11 +81,18 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 # NOTE: after installing gopls, execute rtx reshim to make a gopls shim in rtx shims path for ide
 # rtx use -g go
 
+
 # rtx plugins install act
 # rtx use -g act
 
 # rtx plugins install lazydocker https://github.com/comdotlinux/asdf-lazydocker.git
 # rtx use -g lazydocker
 
+# rtx plugins install jq
 # rtx use -g jq
+
+# rtx plugins install k3d
 # rtx use -g k3d
+
+# rtx plugins install kubectl
+# rtx use -g kubectl
