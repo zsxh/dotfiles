@@ -22,6 +22,7 @@ end)
 
 -- changing the color scheme:
 local custom_doom_one = wezterm.color.get_builtin_schemes()['DoomOne'];
+custom_doom_one.brights[1] = '#5B6268' -- bright black
 custom_doom_one.ansi[5] = '#268bd2' -- ansi blue
 custom_doom_one.brights[5] = '#51afef' -- bright blue
 config.color_schemes = {
