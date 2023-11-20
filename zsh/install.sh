@@ -97,3 +97,6 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 # rtx plugins install kubectl
 # rtx use -g kubectl
 # kubectl completion zsh > ${ZDOTDIR:-$HOME}/completions/_kubectl
+
+# rtx plugins install k9s
+# rtx use -g k9s
