@@ -48,6 +48,7 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 
 # rtx plugins install pnpm
 # rtx use -g pnpm
+# pnpm config set registry https://registry.npmmirror.com
 # pnpm add -g typescript-language-server typescript pyright
 
 # rtx install python@3.10
