@@ -58,6 +58,7 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 # pipx install ruff
 # pipx install black
 # pipx install iredis
+# mkdir -p ${ZDOTDIR:-$HOME}/completions
 # pdm completion zsh > ${ZDOTDIR:-$HOME}/completions/_pdm
 
 # export RTX_FETCH_REMOTE_VERSIONS_TIMEOUT=60s
