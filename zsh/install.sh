@@ -53,6 +53,8 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 
 # rtx install python@3.10
 # rtx use -g python@3.10
+# python3 -m pip install --upgrade pip
+# pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 # python3 -m pip install --user --upgrade pipx
 # python3 -m pipx ensurepath
 # pipx install "pdm[all]"
@@ -61,6 +63,7 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 # pipx install iredis
 # mkdir -p ${ZDOTDIR:-$HOME}/completions
 # pdm completion zsh > ${ZDOTDIR:-$HOME}/completions/_pdm
+# pdm config pypi.url https://pypi.tuna.tsinghua.edu.cn/simple
 
 # export RTX_FETCH_REMOTE_VERSIONS_TIMEOUT=60s
 # rtx install java@adoptopenjdk-8 # or zulu-8
