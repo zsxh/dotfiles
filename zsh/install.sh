@@ -84,7 +84,8 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 
 # NOTE: after installing gopls, execute rtx reshim to make a gopls shim in rtx shims path for ide
 # rtx use -g go
-
+# go install golang.org/x/tools/gopls@latest
+# rtx reshim
 
 # rtx plugins install act
 # rtx use -g act
