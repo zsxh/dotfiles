@@ -109,3 +109,5 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 
 # rtx plugins install buildpack
 # rtx use -g buildpack
+# pack completion --shell zsh
+# cp ~/.pack/completion.zsh ${ZDOTDIR:-$HOME}/completions/_pack
