@@ -1,9 +1,33 @@
 #!/usr/bin/env zsh
 
-# load platform specific config
-source "${ZDOTDIR:-${HOME}}/.zshrc-`uname`"
+if [[ ${OS_UNAME} == "Linux" ]]; then
+    # rtx, Polyglot runtime manager (asdf rust clone)
+    export RTX_HOME=$HOME/.local/share/rtx
+    # NOTE: set PATH
+    export PATH=$RTX_HOME/bin:$PATH
+elif [[ ${OS_UNAME} == "Darwin" ]]; then
+    export LDFLAGS="-L/opt/homebrew/opt/jpeg/lib -L/opt/homebrew/opt/libxml2/lib -L/opt/homebrew/opt/giflib/lib -L/opt/homebrew/opt/libtiff/lib -L/opt/homebrew/opt/webp/lib -L/opt/homebrew/opt/util-linux/lib -L/opt/homebrew/opt/openssl/lib"
+    export CPPFLAGS="-I/opt/homebrew/opt/jpeg/include -I/opt/homebrew/opt/libxml2/include -I/opt/homebrew/opt/giflib/include -I/opt/homebrew/opt/libtiff/include -I/opt/homebrew/opt/webp/include -I/opt/homebrew/opt/util-linux/include -I/opt/homebrew/opt/openssl/include"
+    export PKG_CONFIG_PATH=/opt/homebrew/opt/jpeg/lib/pkgconfig:/opt/homebrew/opt/libxml2/lib/pkgconfig:/opt/homebrew/opt/util-linux/lib/pkgconfig:/opt/homebrew/opt/poppler/lib/pkgconfig:/opt/homebrew/opt/openssl/lib/pkgconfig
+    # emacs
+    export EMACS_APP=/Applications/Emacs.app/Contents/MacOS
+    # util-linux
+    export UTIL_LINUX=/opt/homebrew/opt/util-linux
+    # NOTE: set PATH
+    export PATH=$HOME/.local/bin:$UTIL_LINUX/bin:$UTIL_LINUX/sbin:$EMACS_APP:$EMACS_APP/bin:$PATH
+fi
 
-# load rtx
+# javascript
+export PNPM_HOME=$HOME/.local/share/pnpm
+# go
+export GOPROXY=https://goproxy.cn,direct
+# lsp
+export LSP_SERVER=$HOME/.emacs.d/cache/lsp-servers/bin
+
+# NOTE: set PATH
+export PATH=$PNPM_HOME:$LSP_SERVER:$PATH
+
+# activate rtx at last
 if command -v rtx &>/dev/null; then
     export PATH="$HOME/.local/share/rtx/shims:${PATH}"
     eval "$(rtx activate zsh)"

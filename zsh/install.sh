@@ -21,8 +21,6 @@ ln -sf ${currentDir}/.zshenv ~/.zshenv
 ln -sf ${currentDir}/.zshenv-path ${ZDOTDIR}/.zshenv-path
 ln -sf ${currentDir}/.zprofile ${ZDOTDIR}/.zprofile
 ln -sf ${currentDir}/.zshrc ${ZDOTDIR}/.zshrc
-ln -sf ${currentDir}/.zshrc-Linux ${ZDOTDIR}/.zshrc-Linux
-ln -sf ${currentDir}/.zshrc-Darwin ${ZDOTDIR}/.zshrc-Darwin
 ln -sf ${currentDir}/plugins.zsh ${ZDOTDIR}/plugins.zsh
 ln -sf ${currentDir}/.p10k.zsh ${ZDOTDIR}/.p10k.zsh
 
@@ -32,7 +30,7 @@ git clone --depth 1 https://github.com/zsh-users/zsh-completions.git ${ZDOTDIR}/
 git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powerlevel10k
 
 # p10k fonts
-# deps: fzf, zoxide, tldr ...
+# deps: fzf, zoxide, tldr, git-info, ...
 
 # Arch
 # pacman -S fd poppler ffmpegthumbnailer mediainfo imagemagick tar unzip
