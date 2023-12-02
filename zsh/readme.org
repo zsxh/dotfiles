@@ -1,3 +1,11 @@
 *  Properly setting $PATH for zsh on macOS (fighting with path_helper)
 
 https://gist.github.com/Linerre/f11ad4a6a934dcf01ee8415c9457e7b2
+
+1. =/etc/zshenv= (no longer exists on macOS by default)
+2. =${ZDOTDIR}/.zshenv=
+3. *login* mode:
+    - =/etc/zprofile= (calling ~path_helper~)
+    - =${ZDOTDIR}/.zprofile=
+4. *interactive*: =/etc/zshrc= =${ZDOTDIR}/.zshrc=
+5. *login* mode: =/etc/zlogin= =${ZDOTDIR}/.zlogin=

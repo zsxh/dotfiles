@@ -15,14 +15,6 @@ elif [[ ${OS_UNAME} == "Darwin" ]] && command -v gdircolors &>/dev/null; then
     eval "$(gdircolors --sh)"
 fi
 
-
-# ------------------- PATH -------------------
-# NOTE: prevent /usr/libexec/path_helper from reordering zsh $PATH
-# https://gist.github.com/Linerre/f11ad4a6a934dcf01ee8415c9457e7b2
-if [[ ${OS_UNAME} == "Darwin" ]]; then
-    source "${ZDOTDIR:-${HOME}}/.zshenv-path"
-fi
-
 # ------------------- Alias -------------------
 alias mg="mvn archetype:generate"
 # before wsl verion 2.0.0
