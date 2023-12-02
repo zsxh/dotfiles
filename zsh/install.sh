@@ -18,6 +18,7 @@ currentDir=$(
 echo ${currentDir}
 
 ln -sf ${currentDir}/.zshenv ~/.zshenv
+ln -sf ${currentDir}/.zshenv-path ${ZDOTDIR}/.zshenv-path
 ln -sf ${currentDir}/.zprofile ${ZDOTDIR}/.zprofile
 ln -sf ${currentDir}/.zshrc ${ZDOTDIR}/.zshrc
 ln -sf ${currentDir}/.zshrc-Linux ${ZDOTDIR}/.zshrc-Linux

@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+
+# load platform specific config
+source "${ZDOTDIR:-${HOME}}/.zshrc-`uname`"
+
+# load rtx
+if command -v rtx &>/dev/null; then
+    export PATH="$HOME/.local/share/rtx/shims:${PATH}"
+    eval "$(rtx activate zsh)"
+fi

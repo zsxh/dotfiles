@@ -49,3 +49,6 @@ fi
 
 # Skipping Ubuntu system-wide compinit
 skip_global_compinit=1
+
+# ------------------- PATH -------------------
+source "${ZDOTDIR:-${HOME}}/.zshenv-path"

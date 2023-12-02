@@ -15,13 +15,12 @@ elif [[ ${OS_UNAME} == "Darwin" ]] && command -v gdircolors &>/dev/null; then
     eval "$(gdircolors --sh)"
 fi
 
-# ------------------- PATH -------------------
-source "${ZDOTDIR:-${HOME}}/.zshrc-`uname`"
 
-# load rtx
-if command -v rtx &>/dev/null; then
-    export PATH="$HOME/.local/share/rtx/shims:${PATH}"
-    eval "$(rtx activate zsh)"
+# ------------------- PATH -------------------
+# NOTE: prevent /usr/libexec/path_helper from reordering zsh $PATH
+# https://gist.github.com/Linerre/f11ad4a6a934dcf01ee8415c9457e7b2
+if [[ ${OS_UNAME} == "Darwin" ]]; then
+    source "${ZDOTDIR:-${HOME}}/.zshenv-path"
 fi
 
 # ------------------- Alias -------------------
