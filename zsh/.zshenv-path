@@ -26,9 +26,4 @@ export LSP_SERVER=$HOME/.emacs.d/cache/lsp-servers/bin
 
 # NOTE: set PATH
 export PATH=$PNPM_HOME:$LSP_SERVER:$PATH
-
-# activate rtx at last
-if command -v rtx &>/dev/null; then
-    export PATH="$HOME/.local/share/rtx/shims:${PATH}"
-    eval "$(rtx activate zsh)"
-fi
+export PATH=$HOME/.local/share/rtx/shims:$PATH

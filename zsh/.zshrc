@@ -15,6 +15,11 @@ elif [[ ${OS_UNAME} == "Darwin" ]] && command -v gdircolors &>/dev/null; then
     eval "$(gdircolors --sh)"
 fi
 
+# Activate rtx
+if command -v rtx &>/dev/null; then
+    eval "$(rtx activate zsh)"
+fi
+
 # ------------------- Alias -------------------
 alias mg="mvn archetype:generate"
 # before wsl verion 2.0.0
