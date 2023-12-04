@@ -1,5 +1,3 @@
-# echo "login shell"
-
 # ------------------- PATH -------------------
 # NOTE: prevent /usr/libexec/path_helper from reordering zsh $PATH
 # https://gist.github.com/Linerre/f11ad4a6a934dcf01ee8415c9457e7b2
