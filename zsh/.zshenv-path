@@ -14,7 +14,7 @@ elif [[ ${OS_UNAME} == "Darwin" ]]; then
     # util-linux
     export UTIL_LINUX=/opt/homebrew/opt/util-linux
     # NOTE: set PATH
-    export PATH=$HOME/.local/bin:$UTIL_LINUX/bin:$UTIL_LINUX/sbin:$EMACS_APP:$EMACS_APP/bin:$PATH
+    export PATH=$UTIL_LINUX/bin:$UTIL_LINUX/sbin:$EMACS_APP:$EMACS_APP/bin:$PATH
 fi
 
 # javascript
@@ -26,4 +26,4 @@ export LSP_SERVER=$HOME/.emacs.d/cache/lsp-servers/bin
 
 # NOTE: set PATH
 export PATH=$PNPM_HOME:$LSP_SERVER:$PATH
-export PATH=$HOME/.local/share/rtx/shims:$PATH
+export PATH=$HOME/.local/share/rtx/shims:$HOME/.local/bin:$PATH
