@@ -52,3 +52,6 @@ skip_global_compinit=1
 
 # ------------------- PATH -------------------
 source "${ZDOTDIR:-${HOME}}/.zshenv-path"
+
+# Secrets
+[ -f ${ZDOTDIR:-${HOME}}/secrets.zsh ] && source ${ZDOTDIR:-${HOME}}/secrets.zsh
