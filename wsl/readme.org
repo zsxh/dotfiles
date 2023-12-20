@@ -1,2 +1,13 @@
+* wsl config
 create a .wslconfig file in your Windows home directory
 (e.g: C:\Users\<yourusername>\.wslconfig)
+
+* access wsl docker from windows
+
+edit =/etc/docker/daemon.json= and add
+
+#+begin_src json
+  {
+    "iptables": false
+  }
+#+end_src
