@@ -1,10 +1,10 @@
 #!/usr/bin/env zsh
 
 if [[ ${OS_UNAME} == "Linux" ]]; then
-    # rtx, Polyglot runtime manager (asdf rust clone)
-    export RTX_HOME=$HOME/.local/share/rtx
+    # mise, Polyglot runtime manager (asdf rust clone)
+    export MISE_HOME=$XDG_DATA_HOME/mise
     # NOTE: set PATH
-    export PATH=$RTX_HOME/bin:$PATH
+    export PATH=$MISE_HOME/bin:$PATH
 elif [[ ${OS_UNAME} == "Darwin" ]]; then
     export LDFLAGS="-L/opt/homebrew/opt/jpeg/lib -L/opt/homebrew/opt/libxml2/lib -L/opt/homebrew/opt/giflib/lib -L/opt/homebrew/opt/libtiff/lib -L/opt/homebrew/opt/webp/lib -L/opt/homebrew/opt/util-linux/lib -L/opt/homebrew/opt/openssl/lib"
     export CPPFLAGS="-I/opt/homebrew/opt/jpeg/include -I/opt/homebrew/opt/libxml2/include -I/opt/homebrew/opt/giflib/include -I/opt/homebrew/opt/libtiff/include -I/opt/homebrew/opt/webp/include -I/opt/homebrew/opt/util-linux/include -I/opt/homebrew/opt/openssl/include"
@@ -26,4 +26,4 @@ export LSP_SERVER=$HOME/.emacs.d/cache/lsp-servers/bin
 
 # NOTE: set PATH
 export PATH=$PNPM_HOME:$LSP_SERVER:$PATH
-export PATH=$HOME/.local/share/rtx/shims:$HOME/.local/bin:$PATH
+export PATH=$HOME/.local/share/mise/shims:$HOME/.local/bin:$PATH

@@ -15,9 +15,9 @@ elif [[ ${OS_UNAME} == "Darwin" ]] && command -v gdircolors &>/dev/null; then
     eval "$(gdircolors --sh)"
 fi
 
-# Activate rtx
-if command -v rtx &>/dev/null; then
-    eval "$(rtx activate zsh)"
+# Activate mise
+if command -v mise &>/dev/null; then
+    eval "$(mise activate zsh)"
 fi
 
 # ------------------- Alias -------------------
