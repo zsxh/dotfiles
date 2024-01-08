@@ -33,6 +33,7 @@ source ${ZDOTDIR:-${HOME}}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # ------------------- zsh-autosuggestions -------------------
 source ${ZDOTDIR:-${HOME}}/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#986801,underline'
 
 # ------------------- zoxide -------------------
 # https://github.com/ajeetdsouza/zoxide, must be added after compinit is called
