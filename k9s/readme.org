@@ -1,0 +1,23 @@
+
+k9s v0.30.0 config directory layout
+
+#+begin_src bash :results output
+  tree -l ${XDG_CONFIG_HOME}/k9s
+#+end_src
+
+#+RESULTS:
+: /home/cbx/.config/k9s
+: ├── aliases.yaml
+: ├── config.yaml
+: └── skins
+:     └── transparent.yaml
+:
+: 1 directory, 3 files
+
+config.yaml custom skin
+
+#+begin_src yaml
+  k9s:
+    ui:
+      skin: transparent
+#+end_src

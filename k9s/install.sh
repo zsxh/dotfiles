@@ -11,4 +11,4 @@ currentDir=$(
   cd $(dirname "$0")
   pwd)
 
-ln -sf ${currentDir}/skin.yml ${XDG_CONFIG_HOME}/k9s/skin.yml
+ln -sf ${currentDir}/skins ${XDG_CONFIG_HOME}/k9s/skins
