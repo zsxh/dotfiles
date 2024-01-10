@@ -39,6 +39,7 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 # brew install coreutils fd poppler ffmpegthumbnailer mediainfo imagemagick
 
 # Install mise, https://github.com/jdx/mise
+# mise completion zsh > ${ZDOTDIR:-$HOME}/completions/_mise
 
 # mise plugins install clojure
 # mise use -g clojure
@@ -111,3 +112,7 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 # mise use -g buildpack
 # pack completion --shell zsh
 # cp ~/.pack/completion.zsh ${ZDOTDIR:-$HOME}/completions/_pack
+
+# mise plugins install helm
+# mise use -g helm
+# helm completion zsh > ${ZDOTDIR:-$HOME}/completions/_helm
