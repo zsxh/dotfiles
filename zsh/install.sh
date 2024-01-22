@@ -116,3 +116,6 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 # mise plugins install helm
 # mise use -g helm
 # helm completion zsh > ${ZDOTDIR:-$HOME}/completions/_helm
+
+# mise plugins install mkcert
+# mise use -g mkcert
