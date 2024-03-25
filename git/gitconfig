@@ -3,8 +3,8 @@
   email = bnbvbchen@gmail.com
 [core]
   quotepath = false
-# [merge]
-#   conflictstyle = diff3
+[merge]
+	conflictstyle = zdiff3
 [diff]
   colorMoved = default
 [http "https://github.com"]

@@ -50,7 +50,7 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 # mise plugins install pnpm
 # mise use -g pnpm
 # pnpm config set registry https://registry.npmmirror.com  # delete cache after changing register, [ -d $PNPM_HOME ] && rm -rf $PNPM_HOME
-# pnpm add -g typescript-language-server typescript pyright
+# pnpm add -g typescript-language-server typescript pyright vscode-langservers-extracted
 
 # mise install python@3.10
 # mise use -g python@3.10

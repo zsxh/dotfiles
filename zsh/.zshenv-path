@@ -13,7 +13,7 @@ elif [[ ${OS_UNAME} == "Darwin" ]]; then
     # util-linux
     export UTIL_LINUX=/opt/homebrew/opt/util-linux
     # NOTE: set PATH
-    export PATH=$LLVM_PATH/bin:$UTIL_LINUX/bin:$UTIL_LINUX/sbin:$EMACS_APP:$EMACS_APP/bin:$PATH
+    export PATH=/opt/homebrew/bin:$LLVM_PATH/bin:$UTIL_LINUX/bin:$UTIL_LINUX/sbin:$EMACS_APP:$EMACS_APP/bin:$PATH
 fi
 
 # javascript
