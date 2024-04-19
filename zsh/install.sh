@@ -68,10 +68,10 @@ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git ${ZDOTDIR}/powe
 
 # export MISE_FETCH_REMOTE_VERSIONS_TIMEOUT=60s
 # mise install java@adoptopenjdk-8 # or zulu-8
-# mise install java@adoptopenjdk-11
-# mise install java@adoptopenjdk-17
-# mise install java@adoptopenjdk-20
-# mise use -g java@adoptopenjkd-20
+# mise install java@temurin-11
+# mise install java@temurin-17
+# mise install java@temurin-21
+# mise use -g  java@temurin-22
 
 # mise plugins install maven
 # mise use -g maven@3
