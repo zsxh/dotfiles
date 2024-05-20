@@ -28,3 +28,6 @@ export CARGO_HOME=$XDG_DATA_HOME/cargo
 # NOTE: set PATH
 export PATH=$PNPM_HOME:$LSP_SERVER:$PATH
 export PATH=$HOME/.local/share/mise/shims:$HOME/.local/bin:$PATH
+
+# if not in an interactive shell, add nix path to emacs exec-path
+[[ $- != *i* ]] && export PATH="$HOME/.nix-profile/bin:/nix/var/nix/profiles/default/bin:$PATH"
