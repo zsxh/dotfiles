@@ -8,6 +8,13 @@ export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 export LC_CTYPE=zh_CN.UTF-8
 
+# Nix
+# FIXME: [macOS updates often break nix installation](https://github.com/NixOS/nix/issues/3616)
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+# End Nix
+
 # Output commands to set the LS_COLORS environment variable.
 if [[ ${OS_UNAME} == "Linux" ]] && command -v dircolors &>/dev/null; then
     eval "$(dircolors --sh)"
