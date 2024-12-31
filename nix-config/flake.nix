@@ -30,14 +30,13 @@
     ...
   }: let
     username = "zsxh";
-    specialArgs =
-      inputs
-      // {
-        inherit username;
-      };
+    specialArgs = inputs // {inherit username;};
   in {
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#macbook
+    # Update
+    # $ nix flake update
+    # $ darwin-rebuild switch --flake .#macbook
     darwinConfigurations."macbook" = nix-darwin.lib.darwinSystem {
       inherit specialArgs;
       modules = [
