@@ -3,9 +3,9 @@
 if [[ ${OS_UNAME} == "Linux" ]]; then
     # others
 elif [[ ${OS_UNAME} == "Darwin" ]]; then
-    export LDFLAGS="-L/opt/homebrew/opt/jpeg/lib -L/opt/homebrew/opt/libxml2/lib -L/opt/homebrew/opt/giflib/lib -L/opt/homebrew/opt/libtiff/lib -L/opt/homebrew/opt/webp/lib -L/opt/homebrew/opt/util-linux/lib -L/opt/homebrew/opt/openssl/lib"
-    export CPPFLAGS="-I/opt/homebrew/opt/jpeg/include -I/opt/homebrew/opt/libxml2/include -I/opt/homebrew/opt/giflib/include -I/opt/homebrew/opt/libtiff/include -I/opt/homebrew/opt/webp/include -I/opt/homebrew/opt/util-linux/include -I/opt/homebrew/opt/openssl/include"
-    export PKG_CONFIG_PATH=/opt/homebrew/opt/jpeg/lib/pkgconfig:/opt/homebrew/opt/libxml2/lib/pkgconfig:/opt/homebrew/opt/util-linux/lib/pkgconfig:/opt/homebrew/opt/poppler/lib/pkgconfig:/opt/homebrew/opt/openssl/lib/pkgconfig
+    # export LDFLAGS="-L/opt/homebrew/opt/jpeg/lib -L/opt/homebrew/opt/libxml2/lib -L/opt/homebrew/opt/giflib/lib -L/opt/homebrew/opt/libtiff/lib -L/opt/homebrew/opt/webp/lib -L/opt/homebrew/opt/util-linux/lib -L/opt/homebrew/opt/openssl/lib"
+    # export CPPFLAGS="-I/opt/homebrew/opt/jpeg/include -I/opt/homebrew/opt/libxml2/include -I/opt/homebrew/opt/giflib/include -I/opt/homebrew/opt/libtiff/include -I/opt/homebrew/opt/webp/include -I/opt/homebrew/opt/util-linux/include -I/opt/homebrew/opt/openssl/include"
+    # export PKG_CONFIG_PATH=/opt/homebrew/opt/jpeg/lib/pkgconfig:/opt/homebrew/opt/libxml2/lib/pkgconfig:/opt/homebrew/opt/util-linux/lib/pkgconfig:/opt/homebrew/opt/poppler/lib/pkgconfig:/opt/homebrew/opt/openssl/lib/pkgconfig
     # llvm clang/clangd
     export LLVM_PATH=/opt/homebrew/opt/llvm
     # emacs

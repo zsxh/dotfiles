@@ -49,6 +49,7 @@
 
     # devtools
     wget
+    tmux
     jq
     act
     buildpack
@@ -65,6 +66,12 @@
     iredis
     mise # manage jdks
     aider-chat
+    fd
+    ffmpegthumbnailer # Lightweight video thumbnailer
+    mediainfo # Supplies technical and tag information about a video or audio file
+    imagemagick # Software suite to create, edit, compose, or convert bitmap images
+    gnutar
+    unzip
 
     # others
     # firefox-devedition

@@ -1,0 +1,79 @@
+*** nix 安装的lib，如何能够被自行编译的程序引用
+
+在 Nix 中，安装的库可以通过以下步骤被自行编译的程序引用：
+
+1. *安装库*：使用 =nix-env= 或 =nix-shell= 安装所需的库。例如：
+   #+begin_src bash
+   nix-env -iA nixpkgs.zlib
+   #+end_src
+
+2. *设置环境变量*：Nix 安装的库通常位于 =/nix/store= 中。你可以通过设置环境变量来引用这些库。例如：
+   #+begin_src bash
+   export PKG_CONFIG_PATH=$(nix-build '<nixpkgs>' -A zlib --no-out-link)/lib/pkgconfig
+   export LD_LIBRARY_PATH=$(nix-build '<nixpkgs>' -A zlib --no-out-link)/lib
+   #+end_src
+
+3. *编译程序*：在编译程序时，确保编译器能够找到这些库。例如：
+   #+begin_src bash
+   gcc -o myprogram myprogram.c -lz
+   #+end_src
+
+4. *使用 =nix-shell=*：如果你在 =nix-shell= 中工作，Nix 会自动设置环境变量，使得库可以被引用。例如：
+   #+begin_src bash
+   nix-shell -p zlib gcc
+   gcc -o myprogram myprogram.c -lz
+   #+end_src
+
+通过这些步骤，你可以确保自行编译的程序能够正确引用 Nix 安装的库。
+
+*** zlib更新会导致地址变化吗，如果会，有没有其他方法
+
+是的，Nix 中每次更新包（如 =zlib=）时，其路径（位于 =/nix/store=）都会发生变化，因为路径中包含哈希值以确保隔离性和可重现性。这会导致之前硬编码的路径失效。
+
+*** 解决方法
+为了避免路径变化带来的问题，可以使用以下方法：
+
+1. *使用 =nix-shell=*
+   在 =nix-shell= 中，Nix 会自动设置环境变量（如 =PKG_CONFIG_PATH= 和 =LD_LIBRARY_PATH=），确保编译时能找到正确的库路径。例如：
+   #+begin_src bash
+   nix-shell -p zlib gcc --run 'gcc -o myprogram myprogram.c -lz'
+   #+end_src
+
+2. *使用 =nix-build= 或 =nix-shell= 的 =--pure= 模式*
+   这些模式会隔离环境，确保只使用 Nix 提供的依赖，避免系统库干扰。
+
+3. *编写 Nix 表达式*
+   通过编写 =default.nix= 或 =shell.nix= 文件，明确声明依赖，Nix 会自动管理路径。例如：
+   #+begin_src nix
+   with import <nixpkgs> {};
+   stdenv.mkDerivation {
+     name = "myprogram";
+     buildInputs = [ zlib ];
+     src = ./.;
+     buildPhase = "gcc -o myprogram myprogram.c -lz";
+     installPhase = "mkdir -p $out/bin; cp myprogram $out/bin/";
+   }
+   #+end_src
+   然后运行：
+   #+begin_src bash
+   nix-build
+   #+end_src
+
+4. *使用 =pkg-config=*
+   如果库支持 =pkg-config=，可以通过它动态获取编译和链接标志。例如：
+   #+begin_src bash
+   gcc -o myprogram myprogram.c $(pkg-config --cflags --libs zlib)
+   #+end_src
+
+5. *使用 =NIX_LDFLAGS= 和 =NIX_CFLAGS_COMPILE=*
+   在 Nix 环境中，这些变量会自动包含正确的库路径。例如：
+   #+begin_src bash
+   export NIX_CFLAGS_COMPILE="$(nix-build '<nixpkgs>' -A zlib --no-out-link)/include"
+   export NIX_LDFLAGS="$(nix-build '<nixpkgs>' -A zlib --no-out-link)/lib"
+   gcc -o myprogram myprogram.c -lz
+   #+end_src
+
+*** 总结
+通过 Nix 的工具（如 =nix-shell=、=nix-build=）和动态方法（如 =pkg-config=），可以避免硬编码路径，确保程序始终使用正确的库版本。
+
+*** 

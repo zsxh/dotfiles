@@ -56,6 +56,10 @@
     # `brew install`
     brews = [
       "curl" # no not install curl via nixpkgs, it's not working well on macOS!
+      "coreutils"
+      "poppler"
+      # TODO: https://emacs-china.org/t/nixos-emacs/28181/9
+      "libvterm"
     ];
 
     # `brew install --cask`
