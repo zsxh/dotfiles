@@ -48,6 +48,7 @@
     gopls
 
     # devtools
+    wget
     jq
     act
     buildpack
@@ -64,6 +65,10 @@
     iredis
     mise # manage jdks
     aider-chat
+
+    # others
+    # firefox-devedition
+    google-chrome
   ];
 
   # Let Home Manager install and manage itself.

@@ -20,8 +20,6 @@ fi
 export PNPM_HOME=$XDG_DATA_HOME/pnpm
 # go
 export GOPROXY=https://goproxy.cn,direct
-# lsp
-export LSP_SERVER=$HOME/.emacs.d/cache/lsp-servers/bin
 # rust
 export CARGO_HOME=$XDG_DATA_HOME/cargo
 
