@@ -1,4 +1,25 @@
-{pkgs, ...}: {
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: let
+  # Homebrew Mirror
+  # NOTE: is only useful when you run `brew install` manually! (not via nix-darwin)
+  homebrew_mirror_env = {
+    # tuna mirror
+    HOMEBREW_API_DOMAIN = "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api";
+    HOMEBREW_BOTTLE_DOMAIN = "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles";
+    HOMEBREW_BREW_GIT_REMOTE = "https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git";
+    HOMEBREW_CORE_GIT_REMOTE = "https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git";
+    HOMEBREW_PIP_INDEX_URL = "https://pypi.tuna.tsinghua.edu.cn/simple";
+  };
+  homebrew_env_script =
+    lib.attrsets.foldlAttrs
+    (acc: name: value: acc + "\nexport ${name}=${value}")
+    ""
+    homebrew_mirror_env;
+in {
   # Install packages from nix's official package repository.
   #
   # The packages installed here are available to all users, and are reproducible across machines, and are rollbackable.
@@ -8,12 +29,30 @@
   environment.systemPackages = with pkgs; [
     vim
     git
+    coreutils-full # 包含 GNU Coreutils 的工具集，如 `ls`, `cp`, `mv`, `rm` 等常用命令
+    gnutar
+    unzip
+    tree
+    wget
   ];
-  environment.variables.EDITOR = "vim";
 
-  # Create /etc/zshrc that loads the nix-darwin environment.
-  # this is required if you want to use darwin's default shell - zsh
-  programs.zsh.enable = true;
+  environment.variables =
+    {
+      EDITOR = "vim";
+      TIME_STYLE = "long-iso"; # ls -l 用长时间代替短时间格式
+      EMACS_APP = "/Applications/Emacs.app/Contents/MacOS";
+      PATH = "$PATH:/opt/homebrew/bin:$EMACS_APP:$EMACS_APP/bin";
+    }
+    # Set variables for you to manually install homebrew packages.
+    // homebrew_mirror_env;
+
+  # Set environment variables for nix-darwin before run `brew bundle`.
+  system.activationScripts.homebrew.text = lib.mkBefore ''
+    echo >&2 '${homebrew_env_script}'
+    ${homebrew_env_script}
+  '';
+
+  # /etc/shells
   environment.shells = [
     pkgs.zsh
   ];
@@ -39,7 +78,7 @@
     masApps = {
       WPS = 1443749478;
       Wechat = 836500024;
-      WeCom = 1189898970;  # Wechat for Work
+      WeCom = 1189898970; # Wechat for Work
       TecentMetting = 1484048379;
       BaiduNetDisk = 547166701;
       # Xcode = 497799835;
@@ -56,7 +95,6 @@
     # `brew install`
     brews = [
       "curl" # no not install curl via nixpkgs, it's not working well on macOS!
-      "coreutils"
       "poppler"
       # TODO: https://emacs-china.org/t/nixos-emacs/28181/9
       "libvterm"
@@ -76,7 +114,6 @@
       "karabiner-elements"
       "scroll-reverser"
       "firefox@developer-edition"
-      "telegram"
       "clash-verge-rev"
     ];
   };

@@ -1,5 +1,6 @@
 * TODO List
-  - [ ] shell enviroment
-  - [ ] zsh config
+  - [X] shell enviroment
+  - [X] zsh config
   - [ ] mirror setup
   - [ ] dotfiles
+  - [ ] direnv
